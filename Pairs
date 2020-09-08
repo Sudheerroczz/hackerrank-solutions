@@ -1,0 +1,30 @@
+""" https://www.hackerrank.com/challenges/pairs/problem?h_l=interview&playlist_slugs%5B%5D=virtusa """
+Sample Input
+
+5 2  
+1 5 3 4 2  
+Sample Output
+
+3
+Explanation
+
+There are 3 pairs of integers in the set with a difference of 2: [5,3], [4,2] and [3,1] .
+
+
+
+def pairs(k, arr):
+    count=0
+    for elem in arr:
+        temp=elem+k
+        if temp in arr:
+            count+=1
+    return count
+    
+    
+    
+ or 
+ 
+ 
+ return len(set(arr) & set(x + k for x in arr))
+ 
+ 
